@@ -1,6 +1,6 @@
 # Designing Museum Experiences — Style Guide
 
-Source of truth for visual and structural consistency on **[museum-experiences.com](https://museum-experiences.com/)** and all pages in this repo (`/resources/`, `/museum-toolbox/`, etc.).
+Source of truth for visual and structural consistency on **[museumexperiences.com](https://museumexperiences.com/)** and all pages in this repo (`/resources/`, `/museum-toolbox/`, etc.).
 
 Implementation lives in `assets/site.css` and `index.html`. New pages should link to the shared stylesheet and follow component patterns documented here.
 
@@ -144,7 +144,7 @@ Standard four-property footer on every page:
     <a href="https://markwalhimer.com">Art</a>
     <a href="https://museumplanning.com">Consulting</a>
     <a href="https://museums101.com">Museums 101</a>
-    <a href="https://museum-experiences.com">Experiences</a>
+    <a href="https://museumexperiences.com">Experiences</a>
     <a href="mailto:mark@museumplanning.com">Contact</a>
   </div>
 </footer>
@@ -264,7 +264,7 @@ When linking to sibling sites, use this order and labeling:
 1. **markwalhimer.com** — Art  
 2. **museumplanning.com** — Consulting  
 3. **museums101.com** — Museums 101  
-4. **museum-experiences.com** — Experiences (this site)
+4. **museumexperiences.com** — Experiences (this site)
 
 Schema `sameAs` on the homepage lists the same four domains.
 

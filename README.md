@@ -1,8 +1,8 @@
 # Designing Museum Experiences
 
-Official hub for [*Designing Museum Experiences*](https://museum-experiences.com/) by Mark Walhimer (Rowman & Littlefield / AAM Press, 2021) — a how-to guide for visitor-centered, inclusive, and immersive museum experiences.
+Official hub for [*Designing Museum Experiences*](https://museumexperiences.com/) by Mark Walhimer (Rowman & Littlefield / AAM Press, 2021) — a how-to guide for visitor-centered, inclusive, and immersive museum experiences.
 
-Static site deployed via **GitHub Pages** at **[museum-experiences.com](https://museum-experiences.com/)**.
+Static site deployed via **GitHub Pages** at **[museumexperiences.com](https://museumexperiences.com/)**.
 
 ---
 
@@ -15,7 +15,7 @@ This site is one of four primary web properties in a unified Mark Walhimer / Mus
 | **[markwalhimer.com](https://markwalhimer.com/)** | Art practice — selected works, catalog, studio | Curators, collectors, residency programs |
 | **[museumplanning.com](https://museumplanning.com/)** | Commercial consulting — hire, services, contact | Museum consultant, feasibility, master planning, capital campaign |
 | **[museums101.com](https://museums101.com/)** | Book 1 — *Museums 101* | Starting a museum, governance, museum basics |
-| **[museum-experiences.com](https://museum-experiences.com/)** | Book 2 — *Designing Museum Experiences* (this site) | Visitor experience design, journey mapping, inclusive & immersive experiences |
+| **[museumexperiences.com](https://museumexperiences.com/)** | Book 2 — *Designing Museum Experiences* (this site) | Visitor experience design, journey mapping, inclusive & immersive experiences |
 
 Each site owns a distinct keyword lane. Consulting service terms belong on **museumplanning.com**, not here.
 
@@ -27,9 +27,9 @@ These are being phased out to reduce SEO cannibalization and simplify the brand:
 
 | Property | Status | Notes |
 |----------|--------|-------|
-| **museum-experiences.com (WordPress)** | Retiring | Replaced by this static GitHub Pages site |
+| **museum-experiences.com (WordPress, hyphenated)** | Retiring | 301 → museumexperiences.com; replaced by this static GitHub Pages site |
 | **museumplanner.org** | Retiring | 400+ articles competed with museumplanning.com for “museum planning” and “feasibility” queries; use noindex + 301 redirects, not hard 404s |
-| **museumcourses.com** | Retiring | Low SEO value; cannibalization risk vs. paid consulting; 301 → museum-experiences.com if course remains elsewhere |
+| **museumcourses.com** | Retiring | Low SEO value; cannibalization risk vs. paid consulting; 301 → museumexperiences.com if course remains elsewhere |
 
 **mark-walhimer.com** → redirecting to **markwalhimer.com** (hyphen dropped).
 
@@ -41,7 +41,7 @@ Implemented in `index.html` (May 2026):
 
 - `<title>`, meta description, keywords (book / experience-design focused)
 - `robots`: index, follow
-- Canonical: `https://museum-experiences.com/`
+- Canonical: `https://museumexperiences.com/`
 - Open Graph + Twitter Card (`summary_large_image`)
 - JSON-LD: `Book`, `Person`, `WebSite`, `Organization` with `sameAs` linking all four primary domains
 - `robots.txt`, `sitemap.xml`
@@ -71,19 +71,20 @@ Implemented in `index.html` (May 2026):
 
 ### Current state
 
-- **This repo** is the replacement for the old WordPress site at museum-experiences.com.
-- `CNAME` points GitHub Pages at `museum-experiences.com`.
-- DNS for `museum-experiences.com` may still resolve to WordPress (SiteGround) until cutover — visitors see the old site until DNS is updated.
+- **This repo** is the replacement for the old WordPress site (formerly at museum-experiences.com).
+- `CNAME` points GitHub Pages at `museumexperiences.com`.
+- DNS for `museumexperiences.com` must point to GitHub Pages — until then, visitors may see the old host or WordPress on the hyphenated domain.
 
 ### DNS cutover checklist
 
-1. **GitHub** → Settings → Pages → confirm custom domain `museum-experiences.com` → enable **Enforce HTTPS**
-2. **DNS** at registrar:
+1. **GitHub** → Settings → Pages → confirm custom domain `museumexperiences.com` → enable **Enforce HTTPS**
+2. **DNS** at registrar for **museumexperiences.com**:
    - `A` records for apex → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - Or `CNAME` for `www` → `museum-planning-llc.github.io`
-3. Wait for propagation; verify new static site loads
-4. **Retire WordPress** — keep 301 redirects from old URLs for 6–12 months minimum
-5. **Google Search Console** — submit sitemap, request indexing, monitor URL changes
+3. **Redirect** `museum-experiences.com` and `www.museum-experiences.com` → `https://museumexperiences.com/` (301)
+4. Wait for propagation; verify new static site loads
+5. **Retire WordPress** — keep 301 redirects from old URLs for 6–12 months minimum
+6. **Google Search Console** — submit sitemap, request indexing, monitor URL changes
 
 ### WordPress URL redirect map (to build)
 
@@ -100,7 +101,7 @@ Old WordPress paths that need 301 targets before shutdown:
 
 ## Pending work
 
-- [ ] **DNS cutover** — point museum-experiences.com to GitHub Pages
+- [ ] **DNS cutover** — point museumexperiences.com to GitHub Pages; 301 museum-experiences.com → museumexperiences.com
 - [x] **Resource pages** — `/resources/` with templates, checklists, toolbox, and reading links
 - [ ] **museum-toolbox/** — merged into `/resources/#toolbox`; add redirect from old WordPress URL
 - [ ] **WordPress 301 redirects** — full URL map before shutdown
@@ -122,7 +123,7 @@ Designing-Museum-Experiences/
 │   ├── index.html      # Companion resources hub
 │   └── downloads/      # Self-hosted PDFs
 ├── STYLE-GUIDE.md      # Visual and structural source of truth
-├── CNAME               # museum-experiences.com
+├── CNAME               # museumexperiences.com
 ├── robots.txt
 ├── sitemap.xml
 ├── images/
