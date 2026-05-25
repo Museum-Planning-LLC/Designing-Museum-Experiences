@@ -115,12 +115,13 @@ Old WordPress paths that need 301 targets before shutdown:
 ```
 Designing-Museum-Experiences/
 ├── index.html          # Single-page book hub
+├── STYLE-GUIDE.md      # Visual and structural source of truth
 ├── CNAME               # museum-experiences.com
 ├── robots.txt
 ├── sitemap.xml
 ├── images/
 │   └── designing-museum-experiences-cover.jpg
-└── README.md           # This file
+└── README.md           # Strategy, SEO, migration plan
 ```
 
 ---
