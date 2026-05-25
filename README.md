@@ -92,8 +92,8 @@ Old WordPress paths that need 301 targets before shutdown:
 | Old path | Planned destination |
 |----------|---------------------|
 | `/` | `/` (this site) |
-| `/resources/` | `/resources/` (static page — not yet built) |
-| `/museum-toolbox/` | `/museum-toolbox/` (static page — not yet built) |
+| `/resources/` | `/resources/` (live) |
+| `/museum-toolbox/` | `/resources/#toolbox` |
 | Other indexed URLs | Map individually or redirect to `/` |
 
 ---
@@ -101,7 +101,8 @@ Old WordPress paths that need 301 targets before shutdown:
 ## Pending work
 
 - [ ] **DNS cutover** — point museum-experiences.com to GitHub Pages
-- [ ] **Resource pages** — build `/resources/` and `/museum-toolbox/` (links on homepage currently point here)
+- [x] **Resource pages** — `/resources/` with templates, checklists, toolbox, and reading links
+- [ ] **museum-toolbox/** — merged into `/resources/#toolbox`; add redirect from old WordPress URL
 - [ ] **WordPress 301 redirects** — full URL map before shutdown
 - [ ] **museumplanning.com** — update footer/links to four-site navigation (remove Museum Planner / Courses)
 - [ ] **museums101.com** — migrate from WordPress to static GitHub site; trim meta keywords to avoid consulting cannibalization
@@ -115,6 +116,11 @@ Old WordPress paths that need 301 targets before shutdown:
 ```
 Designing-Museum-Experiences/
 ├── index.html          # Single-page book hub
+├── assets/
+│   └── site.css        # Shared styles (homepage + subpages)
+├── resources/
+│   ├── index.html      # Companion resources hub
+│   └── downloads/      # Self-hosted PDFs
 ├── STYLE-GUIDE.md      # Visual and structural source of truth
 ├── CNAME               # museum-experiences.com
 ├── robots.txt

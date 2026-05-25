@@ -2,7 +2,7 @@
 
 Source of truth for visual and structural consistency on **[museum-experiences.com](https://museum-experiences.com/)** and all pages in this repo (`/resources/`, `/museum-toolbox/`, etc.).
 
-Implementation lives in `index.html` today (inline CSS). New pages should copy the `:root` tokens and component patterns from that file — do not introduce new palettes or type families without updating this guide.
+Implementation lives in `assets/site.css` and `index.html`. New pages should link to the shared stylesheet and follow component patterns documented here.
 
 ---
 
